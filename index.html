@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Plataforma de Orçamento de Projeto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Plataforma de Orçamento</h1>
+            <p>Defina as características do projeto e receba um orçamento automático</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Formulário Dinâmico -->
+            <form id="project-form">
+                <!-- Seleção do Operador -->
+                <div class="form-group">
+                    <label for="operador">Operador:</label>
+                    <select id="operador" required>
+                        <option value="João Teixeira">João Teixeira</option>
+                        <option value="David Claro">David Claro</option>
+                    </select>
+                </div>
+
+                <!-- Informações do Cliente -->
+                <div class="form-group">
+                    <label for="nome">Nome do Cliente:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email do Cliente:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <!-- Tipo e Objetivo do Projeto -->
+                <div class="form-group">
+                    <label for="tipo">Tipo de Projeto:</label>
+                    <select id="tipo" required>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="website">Website Institucional</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="objetivo">Objetivo Principal:</label>
+                    <select id="objetivo" required>
+                        <option value="venda-produtos">Venda de Produtos</option>
+                        <option value="agendamento">Agendamentos</option>
+                        <option value="contato">Contato</option>
+                        <option value="informacao">Informação</option>
+                    </select>
+                </div>
+
+                <!-- Número de Páginas -->
+                <div class="form-group">
+                    <label for="paginas">Número de Páginas:</label>
+                    <select id="paginas" required>
+                        <option value="landingpage">Landing Page</option>
+                        <option value="home-servicos-contactos">Home, Serviços, Contactos</option>
+                        <option value="loja-simples">Loja Simples</option>
+                        <option value="loja-avancada">Loja Avançada</option>
+                    </select>
+                </div>
+
+                <!-- Número de Produtos -->
+                <div class="form-group">
+                    <label for="produtos">Número de Produtos:</label>
+                    <select id="produtos" required>
+                        <option value="0">0 Produtos</option>
+                        <option value="ate-20">Até 20</option>
+                        <option value="ate-50">Até 50</option>
+                        <option value="ate-200">Até 200</option>
+                        <option value="mais-de-200">Mais de 200</option>
+                    </select>
+                </div>
+
+                <!-- Funcionalidades e Integrações (Checkboxes Combinados) -->
+                <div class="form-group">
+                    <label for="caracteristicas">Funcionalidades e Integrações:</label>
+                    <div>
+                        <input type="checkbox" id="caracteristica-blog" value="Blog">
+                        <label for="caracteristica-blog">Blog</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-chat" value="Chat ao Vivo">
+                        <label for="caracteristica-chat">Chat ao Vivo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-newsletter" value="Newsletter">
+                        <label for="caracteristica-newsletter">Newsletter</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-erp" value="Integração com ERP">
+                        <label for="caracteristica-erp">Integração com ERP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-seo" value="Otimização para Motores de Busca (SEO)">
+                        <label for="caracteristica-seo">Otimização para Motores de Busca (SEO)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-galeria" value="Galeria de Imagens">
+                        <label for="caracteristica-galeria">Galeria de Imagens</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-pagamento" value="Pagamentos Online">
+                        <label for="caracteristica-pagamento">Pagamentos Online (PayPal, Stripe, etc.)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-crm" value="Integração com CRM">
+                        <label for="caracteristica-crm">Integração com CRM</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-social" value="Integração com Redes Sociais">
+                        <label for="caracteristica-social">Integração com Redes Sociais</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-analytics" value="Integração com Google Analytics">
+                        <label for="caracteristica-analytics">Integração com Google Analytics</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-login" value="Login do Cliente">
+                        <label for="caracteristica-login">Login do Cliente</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-pontos" value="Sistema de Pontos">
+                        <label for="caracteristica-pontos">Sistema de Pontos</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-email-marketing" value="Email Marketing">
+                        <label for="caracteristica-email-marketing">Email Marketing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-portes" value="Portes Tabelados">
+                        <label for="caracteristica-portes">Portes Tabelados</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-faturacao" value="Integração com Sistema de Faturação">
+                        <label for="caracteristica-faturacao">Integração com Sistema de Faturação</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-leadmagnet" value="Leadmagnet">
+                        <label for="caracteristica-leadmagnet">Leadmagnet</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="caracteristica-app" value="App Desconhecida">
+                        <label for="caracteristica-app">App Desconhecida</label>
+                    </div>
+                </div>
+
+                <!-- Prazo de Entrega -->
+                <div class="form-group">
+                    <label for="prazo">Prazo de Entrega:</label>
+                    <select id="prazo" required>
+                        <option value="urgente">Urgente (1-2 semanas)</option>
+                        <option value="normal">Normal (3-4 semanas)</option>
+                        <option value="flexivel">Flexível (mais de 4 semanas)</option>
+                    </select>
+                </div>
+
+                <!-- Necessidade de Suporte -->
+                <div class="form-group">
+                    <label for="suporte">Necessidade de Suporte:</label>
+                    <select id="suporte" required>
+                        <option value="basico">Suporte Básico</option>
+                        <option value="avancado">Suporte Avançado</option>
+                        <option value="nenhum">Nenhum Suporte Necessário</option>
+                    </select>
+                </div>
+
+                <!-- Observações Adicionais -->
+                <div class="form-group">
+                    <label for="observacoes">Observações Adicionais:</label>
+                    <textarea id="observacoes" rows="4" placeholder="Insira detalhes adicionais para o email"></textarea>
+                </div>
+
+                <button type="button" id="calcular">Calcular Orçamento</button>
+            </form>
+
+            <!-- Exibição do Orçamento -->
+            <div id="resultado">
+                <h2>Orçamento Estimado</h2>
+                <p id="valor-orcamento"></p>
+                <button id="copiar-email" class="copy-btn">Copiar Email</button>
+                <button type="button" id="generate-pdf">Exportar Orçamento como PDF</button>
+            </div>
+        </div>
+
+        <!-- Indicador de Preço Dinâmico -->
+        <div id="price-display" style="position: fixed; bottom: 10px; right: 10px; background: #f0f0f0; padding: 10px; border-radius: 5px;">
+            Estimativa Atual: € 0.00
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
